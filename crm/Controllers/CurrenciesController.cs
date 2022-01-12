@@ -143,14 +143,10 @@ namespace crm
             {
                 try
                 {
-                    currency.Updated_at = Convert.ToDateTime(DateTime.Now);
+                    currency.Updated_at = DateTime.Now;
+
                     _context.Update(currency);
-                    
                     await _context.SaveChangesAsync();
-                    var newDateCurrency = _context.Currency.First(c => c.Id == currency.Id);
-                    newDateCurrency.Updated_at = DateTime.Now;
-                    _context.Update(newDateCurrency);
-                    _context.SaveChanges();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -192,7 +188,9 @@ namespace crm
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var currency = await _context.Currency.FindAsync(id);
-            _context.Currency.Remove(currency);
+            var rowToUpdate = _context.Currency.Where(x => x.Id == id).FirstOrDefault();
+            rowToUpdate.Ghosted = true;
+            _context.Update(rowToUpdate);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }

@@ -14,17 +14,23 @@ namespace crm.Models
     {
         [Key]
         public int Id { get; set; }
+
         [Required(ErrorMessage ="Symbol nie moze byc pusty")]
         [ReadOnly(true)]
         public string Symbol { get; set; }
+
         [Required(ErrorMessage = "Nazwa nie moze byc pusta")]
         public string Name { get; set; }
+
         public double Rate { get; set; }
+
         public bool Is_Sync { get; set; } = false;
+
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime Created_at { get; set; }
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+
         public DateTime Updated_at { get; set; }
+
         public bool Ghosted { get; set; } = false;
     }
 }
