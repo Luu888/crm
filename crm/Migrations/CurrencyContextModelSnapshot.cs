@@ -16,7 +16,7 @@ namespace crm.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.4")
+                .HasAnnotation("ProductVersion", "5.0.12")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("crm.Models.Currency", b =>
@@ -27,6 +27,7 @@ namespace crm.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<DateTime>("Created_at")
+                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("datetime2");
 
                     b.Property<bool>("Ghosted")
@@ -36,22 +37,24 @@ namespace crm.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("Rate")
                         .HasColumnType("float");
 
                     b.Property<string>("Symbol")
+                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("Updated_at")
+                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
                     b.HasIndex(new[] { "Symbol" }, "IDX_symbol_unique")
-                        .IsUnique()
-                        .HasFilter("[Symbol] IS NOT NULL");
+                        .IsUnique();
 
                     b.ToTable("Currency");
                 });

@@ -17,5 +17,6 @@ namespace crm.Models
 
         }
         public DbSet<Currency> Currency { get; set; }
+
     }
 }

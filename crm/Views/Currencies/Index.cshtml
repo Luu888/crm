@@ -1,0 +1,78 @@
+﻿@model IEnumerable<crm.Models.Currency>
+
+@{
+    ViewData["Title"] = "Lista walut";
+}
+
+<h1>Lista walut</h1>
+
+<p>
+    <a asp-action="Create">Utwórz nową walutę</a>
+</p>
+@using (Html.BeginForm())
+{
+    <p>
+        Szukanie po nazwie lub symbolu: @Html.TextBox("SearchString")
+        <input type="submit" value="SZUKAJ" />
+    </p>
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.ActionLink("Symbol", "Index", new { sortOrder = ViewBag.SymbolSortParam })
+            </th>
+            <th>
+                @Html.ActionLink("Name", "Index", new { sortOrder = ViewBag.NameSortParam })
+            </th>
+            <th>
+                @Html.ActionLink("Rate", "Index", new { sortOrder = ViewBag.RateSortParam })
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Is_Sync)
+            </th>
+            <th>
+                @Html.ActionLink("Created At", "Index", new { sortOrder = ViewBag.CreatedSortParam })
+            </th>
+            <th>
+                @Html.ActionLink("Updated At", "Index", new { sortOrder = ViewBag.UpdatedSortParam })
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ghosted)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Symbol)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Rate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Is_Sync)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Created_at)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Updated_at)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ghosted)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">UPDATE</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">DELETE</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
