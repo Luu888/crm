@@ -192,6 +192,7 @@ namespace crm
             var currency = await _context.Currency.FindAsync(id);
             var rowToUpdate = _context.Currency.Where(x => x.Id == id).FirstOrDefault();
             rowToUpdate.Ghosted = true;
+            rowToUpdate.Is_Sync = false;
             _context.Update(rowToUpdate);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));

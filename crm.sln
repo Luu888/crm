@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "crm", "crm\crm.csproj", "{AC908415-6322-4A1B-804A-EBEEC2C01981}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetCurrencies", "GetCurrencies\GetCurrencies.csproj", "{27261527-4DE5-4A26-AD51-E32CADB3B9D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetCurrencies", "GetCurrencies\GetCurrencies.csproj", "{27261527-4DE5-4A26-AD51-E32CADB3B9D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APICurrency", "APICurrency\APICurrency.csproj", "{FD4ADF1B-492A-4729-8C0C-BBCE5C94AFAA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{27261527-4DE5-4A26-AD51-E32CADB3B9D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27261527-4DE5-4A26-AD51-E32CADB3B9D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27261527-4DE5-4A26-AD51-E32CADB3B9D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD4ADF1B-492A-4729-8C0C-BBCE5C94AFAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD4ADF1B-492A-4729-8C0C-BBCE5C94AFAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD4ADF1B-492A-4729-8C0C-BBCE5C94AFAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD4ADF1B-492A-4729-8C0C-BBCE5C94AFAA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

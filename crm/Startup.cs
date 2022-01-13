@@ -25,7 +25,6 @@ namespace crm
             services.AddDbContext<CurrencyContext>(options=>options.UseSqlServer(connectionString));
             services.AddControllersWithViews();
             services.AddScoped<ICurrencyService, CurrencyService>();
-            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
