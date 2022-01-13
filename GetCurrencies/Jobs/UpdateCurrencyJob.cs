@@ -17,7 +17,9 @@ namespace GetCurrencies.Jobs
     {
         public static void UpdateJob()
         {
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine($"Job started at: {DateTime.Now}");
+            Console.ForegroundColor = ConsoleColor.Gray;
             var builder = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json");
             var configuration = builder.Build();
             var optionsBuilder = new DbContextOptionsBuilder<CurrencyContext>();

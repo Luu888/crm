@@ -26,7 +26,7 @@ namespace GetCurrencies
                     services.AddSingleton<IJobFactory, MyJobFactory>();
                     services.AddSingleton<ISchedulerFactory, StdSchedulerFactory>();
                     services.AddSingleton<UpdateCurrencyJob>();
-                    services.AddSingleton(new JobModal(Guid.NewGuid(), typeof(UpdateCurrencyJob), "Update Currency Job", "1 * * * * ?"));
+                    services.AddSingleton(new JobModal(Guid.NewGuid(), typeof(UpdateCurrencyJob), "Update Currency Job", "0/10 * * * * ?"));
                     services.AddHostedService<Scheduler>();
                 }
             );

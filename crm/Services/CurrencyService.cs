@@ -32,10 +32,19 @@ namespace crm.Services
             {
                 if (item.Is_Sync == true)
                 {
-                    Console.WriteLine($"{item.Symbol} - Stary kurs: {item.Rate} - Nowy Kurs: {dobj["rates"][item.Symbol]}");
-                    item.Rate = dobj["rates"][item.Symbol];
-                    item.Rate = Math.Round(item.Rate, 3);
-                    item.Updated_at = DateTime.Now;
+                    if (dobj["rates"][item.Symbol] != null)
+                    {
+                        Console.WriteLine($"{item.Symbol} - Stary kurs: {item.Rate} - Nowy Kurs: {dobj["rates"][item.Symbol]}");
+                        item.Rate = dobj["rates"][item.Symbol];
+                        item.Rate = Math.Round(item.Rate, 3);
+                        item.Updated_at = DateTime.Now;
+                    }
+                    else
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine($"{item.Symbol} Nieobsługiwana lub bledny symbol waluty");
+                        Console.ForegroundColor = ConsoleColor.Gray;
+                    }
                 }
             }
             _context.SaveChanges();
