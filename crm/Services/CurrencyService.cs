@@ -1,12 +1,10 @@
 ﻿using crm.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Data.SqlClient;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using System.Threading.Tasks;
 
 namespace crm.Services
 {
@@ -34,7 +32,7 @@ namespace crm.Services
             {
                 if (item.Is_Sync == true)
                 {
-                    Console.WriteLine($"{item.Rate} - {dobj["rates"][item.Symbol]}");
+                    Console.WriteLine($"{item.Symbol} - Stary kurs: {item.Rate} - Nowy Kurs: {dobj["rates"][item.Symbol]}");
                     item.Rate = dobj["rates"][item.Symbol];
                     item.Rate = Math.Round(item.Rate, 3);
                     item.Updated_at = DateTime.Now;

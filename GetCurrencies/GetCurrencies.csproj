@@ -6,6 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Hangfire.AspNetCore" Version="1.7.28" />
+    <PackageReference Include="Hangfire.Core" Version="1.7.28" />
+    <PackageReference Include="Hangfire.MemoryStorage" Version="1.7.0" />
     <PackageReference Include="Quartz" Version="3.3.3" />
   </ItemGroup>
 

@@ -33,11 +33,13 @@
     ".NETCoreApp,Version=v5.0": {
       "crm/1.0.0": {
         "dependencies": {
+          "Hangfire.AspNetCore": "1.7.28",
+          "Hangfire.Core": "1.7.28",
+          "Hangfire.MemoryStorage": "1.7.0",
           "Microsoft.EntityFrameworkCore": "5.0.12",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.12",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.12",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2",
-          "Quartz": "3.3.3",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "5.0.0.0",
@@ -325,6 +327,89 @@
         },
         "compile": {
           "crm.dll": {}
+        }
+      },
+      "Hangfire.AspNetCore/1.7.28": {
+        "dependencies": {
+          "Hangfire.Core": "1.7.28"
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Hangfire.AspNetCore.dll": {
+            "assemblyVersion": "1.7.28.0",
+            "fileVersion": "1.7.28.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.0/Hangfire.AspNetCore.dll": {}
+        }
+      },
+      "Hangfire.Core/1.7.28": {
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Hangfire.Core.dll": {
+            "assemblyVersion": "1.7.28.0",
+            "fileVersion": "1.7.28.0"
+          }
+        },
+        "resources": {
+          "lib/netstandard2.0/ca/Hangfire.Core.resources.dll": {
+            "locale": "ca"
+          },
+          "lib/netstandard2.0/de/Hangfire.Core.resources.dll": {
+            "locale": "de"
+          },
+          "lib/netstandard2.0/es/Hangfire.Core.resources.dll": {
+            "locale": "es"
+          },
+          "lib/netstandard2.0/fa/Hangfire.Core.resources.dll": {
+            "locale": "fa"
+          },
+          "lib/netstandard2.0/fr/Hangfire.Core.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/netstandard2.0/nb/Hangfire.Core.resources.dll": {
+            "locale": "nb"
+          },
+          "lib/netstandard2.0/nl/Hangfire.Core.resources.dll": {
+            "locale": "nl"
+          },
+          "lib/netstandard2.0/pt-BR/Hangfire.Core.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/netstandard2.0/pt-PT/Hangfire.Core.resources.dll": {
+            "locale": "pt-PT"
+          },
+          "lib/netstandard2.0/pt/Hangfire.Core.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/netstandard2.0/tr-TR/Hangfire.Core.resources.dll": {
+            "locale": "tr-TR"
+          },
+          "lib/netstandard2.0/zh-TW/Hangfire.Core.resources.dll": {
+            "locale": "zh-TW"
+          },
+          "lib/netstandard2.0/zh/Hangfire.Core.resources.dll": {
+            "locale": "zh"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Hangfire.Core.dll": {}
+        }
+      },
+      "Hangfire.MemoryStorage/1.7.0": {
+        "dependencies": {
+          "Hangfire.Core": "1.7.28"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Hangfire.MemoryStorage.dll": {
+            "assemblyVersion": "1.7.0.0",
+            "fileVersion": "1.7.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.3/Hangfire.MemoryStorage.dll": {}
         }
       },
       "Humanizer.Core/2.8.26": {
@@ -1084,22 +1169,6 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "Quartz/3.3.3": {
-        "dependencies": {
-          "Microsoft.Extensions.Logging.Abstractions": "5.0.0",
-          "System.Configuration.ConfigurationManager": "4.7.0",
-          "System.Diagnostics.DiagnosticSource": "5.0.1"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Quartz.dll": {
-            "assemblyVersion": "3.3.3.0",
-            "fileVersion": "3.3.3.0"
-          }
-        },
-        "compile": {
-          "lib/netstandard2.0/Quartz.dll": {}
-        }
-      },
       "runtime.native.System/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "3.1.0",
@@ -1314,9 +1383,6 @@
             "assemblyVersion": "4.0.3.0",
             "fileVersion": "4.700.19.56404"
           }
-        },
-        "compile": {
-          "ref/netstandard2.0/System.Configuration.ConfigurationManager.dll": {}
         }
       },
       "System.Diagnostics.Debug/4.3.0": {
@@ -3515,6 +3581,27 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Hangfire.AspNetCore/1.7.28": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ebtnPXhuciYXRl7B1UK6IZ32cdFmGvBQ++sjKNiaAp2HEKaqfqYbVgbwijbIOQsT59rja8JqfEsy3KX0TWxAPg==",
+      "path": "hangfire.aspnetcore/1.7.28",
+      "hashPath": "hangfire.aspnetcore.1.7.28.nupkg.sha512"
+    },
+    "Hangfire.Core/1.7.28": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BwA7HIBTwc0Q8MlbTFOzQO5v8hbS6tT5II31vwlT0d8QlaoR5VxpomtcRXRjgg54UgXvAJMUwZ2zogUSkE7/6w==",
+      "path": "hangfire.core/1.7.28",
+      "hashPath": "hangfire.core.1.7.28.nupkg.sha512"
+    },
+    "Hangfire.MemoryStorage/1.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-g4hBdD8CaePScNWDOtRlR0GCxRyCK3KaItPcmABurlUZ8hs0YrpGUAYWgSWUSw6RXuPf1ZUK0l4REpV+sKYm/w==",
+      "path": "hangfire.memorystorage/1.7.0",
+      "hashPath": "hangfire.memorystorage.1.7.0.nupkg.sha512"
+    },
     "Humanizer.Core/2.8.26": {
       "type": "package",
       "serviceable": true,
@@ -3864,13 +3951,6 @@
       "sha512": "sha512-IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
       "path": "newtonsoft.json/11.0.2",
       "hashPath": "newtonsoft.json.11.0.2.nupkg.sha512"
-    },
-    "Quartz/3.3.3": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-waM2gyFQ/JOuvyHmlEnN2jpAiqJAEMEaPq6K6rT/mmLKlW0qvxCIYARDRfWaenJ6qQBHH2/J6cx+bCPVZb8z1Q==",
-      "path": "quartz/3.3.3",
-      "hashPath": "quartz.3.3.3.nupkg.sha512"
     },
     "runtime.native.System/4.3.0": {
       "type": "package",

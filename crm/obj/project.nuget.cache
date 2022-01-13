@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Weq3I5BriOq33vQA5BaUcWEqfWy/1Y7znJSBoB47XOhPK479MqiO7k88lMCcX5mr2TT1fH/BproJnQx/hTzYAg==",
+  "dgSpecHash": "nv8h4q6ankIMycKnEZzycfa5SUy0Nu65czKTnLv9eUUR/6iQrJa/AhSuaOFHZ9sKgd9Of8d6XCNfcaK4wWg0Ig==",
   "success": true,
   "projectFilePath": "C:\\Users\\t.kosek\\source\\repos\\Luu888\\crm\\crm\\crm.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\t.kosek\\.nuget\\packages\\hangfire.aspnetcore\\1.7.28\\hangfire.aspnetcore.1.7.28.nupkg.sha512",
+    "C:\\Users\\t.kosek\\.nuget\\packages\\hangfire.core\\1.7.28\\hangfire.core.1.7.28.nupkg.sha512",
+    "C:\\Users\\t.kosek\\.nuget\\packages\\hangfire.memorystorage\\1.7.0\\hangfire.memorystorage.1.7.0.nupkg.sha512",
     "C:\\Users\\t.kosek\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\t.kosek\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\t.kosek\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
@@ -54,7 +57,6 @@
     "C:\\Users\\t.kosek\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\t.kosek\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\t.kosek\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
-    "C:\\Users\\t.kosek\\.nuget\\packages\\quartz\\3.3.3\\quartz.3.3.3.nupkg.sha512",
     "C:\\Users\\t.kosek\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\t.kosek\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\t.kosek\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",

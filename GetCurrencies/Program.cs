@@ -1,9 +1,13 @@
-﻿using crm.Models;
-using crm.Services;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
+﻿using GetCurrencies.JobFactory;
+using GetCurrencies.Jobs;
+using GetCurrencies.Modals;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Quartz;
+using Quartz.Impl;
+using Quartz.Spi;
 using System;
-using System.IO;
+
 
 namespace GetCurrencies
 {
@@ -11,22 +15,20 @@ namespace GetCurrencies
     {
         static void Main(string[] args)
         {
-            var builder = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json");
-            var configuration = builder.Build();
-            var optionsBuilder = new DbContextOptionsBuilder<CurrencyContext>();
-            optionsBuilder.UseSqlServer(configuration.GetConnectionString("CurrencyConnection"));
-            var _context = new CurrencyContext(optionsBuilder.Options);
-            var service = new CurrencyService(_context);
-            try
-            {
-                service.Update();
-            }
-            catch (Exception ex)
-            {
+            CreateHostBuilder(args).Build().Run();
 
-                Console.WriteLine(ex);
-            }
-            
         }
+        
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+            .ConfigureServices((hostContext, services) =>
+                {
+                    services.AddSingleton<IJobFactory, MyJobFactory>();
+                    services.AddSingleton<ISchedulerFactory, StdSchedulerFactory>();
+                    services.AddSingleton<UpdateCurrencyJob>();
+                    services.AddSingleton(new JobModal(Guid.NewGuid(), typeof(UpdateCurrencyJob), "Update Currency Job", "1 * * * * ?"));
+                    services.AddHostedService<Scheduler>();
+                }
+            );
     }
 }

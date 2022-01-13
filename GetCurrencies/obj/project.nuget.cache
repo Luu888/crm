@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "ZzVhQuEaH2K55OSRl2UzX4eceoB1yZEJheJ83Tlbu+bNdw965sQt71pe+4HI0a66JHhd/YAQ1ec5zMXkaAQKJA==",
+  "dgSpecHash": "Fyic7nm8b1cPI3bj/gE1EEVB/32m8SF8lC2A+Sgt2VqqQxJIUMrtwTX7P7+i88vAt25IxOCK/qOM+UDKctySog==",
   "success": true,
   "projectFilePath": "C:\\Users\\t.kosek\\source\\repos\\Luu888\\crm\\GetCurrencies\\GetCurrencies.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\t.kosek\\.nuget\\packages\\hangfire.aspnetcore\\1.7.28\\hangfire.aspnetcore.1.7.28.nupkg.sha512",
+    "C:\\Users\\t.kosek\\.nuget\\packages\\hangfire.core\\1.7.28\\hangfire.core.1.7.28.nupkg.sha512",
+    "C:\\Users\\t.kosek\\.nuget\\packages\\hangfire.memorystorage\\1.7.0\\hangfire.memorystorage.1.7.0.nupkg.sha512",
     "C:\\Users\\t.kosek\\.nuget\\packages\\humanizer.core\\2.2.0\\humanizer.core.2.2.0.nupkg.sha512",
     "C:\\Users\\t.kosek\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\t.kosek\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
