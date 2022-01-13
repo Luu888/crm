@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Fyic7nm8b1cPI3bj/gE1EEVB/32m8SF8lC2A+Sgt2VqqQxJIUMrtwTX7P7+i88vAt25IxOCK/qOM+UDKctySog==",
+  "dgSpecHash": "k6ksqXFzOaCpYV8IkGrJoFopxsDlQMfmvYNME9nfln4NYvv4udduW7b7Wr6hLgdSy4j445WhChApes7U5/dtMg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\t.kosek\\source\\repos\\Luu888\\crm\\GetCurrencies\\GetCurrencies.csproj",
+  "projectFilePath": "C:\\Users\\t.kosek\\Source\\Repos\\Luu888\\crm\\GetCurrencies\\GetCurrencies.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\t.kosek\\.nuget\\packages\\hangfire.aspnetcore\\1.7.28\\hangfire.aspnetcore.1.7.28.nupkg.sha512",
     "C:\\Users\\t.kosek\\.nuget\\packages\\hangfire.core\\1.7.28\\hangfire.core.1.7.28.nupkg.sha512",

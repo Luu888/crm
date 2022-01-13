@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "d8O+PG2FodqQ3QndGwcOQTepZnySipTi9YetQ4hTnhvXE2ROktKLGxIlAyeZKhwM3TQIWCwfSL3N0c9ULXyuxw==",
+  "dgSpecHash": "zVcPUcwWQSv65ckqAknuHG7S7eD0DBb+H9UduOQVqwd4cxNmkKnnpOjSOcrenkVh+WRN1BQ1PT/gx9woPZjZtA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\t.kosek\\source\\repos\\Luu888\\crm\\APICurrency\\APICurrency.csproj",
+  "projectFilePath": "C:\\Users\\t.kosek\\Source\\Repos\\Luu888\\crm\\APICurrency\\APICurrency.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\t.kosek\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.2\\microsoft.aspnetcore.authentication.jwtbearer.3.1.2.nupkg.sha512",
     "C:\\Users\\t.kosek\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.13\\microsoft.aspnetcore.jsonpatch.5.0.13.nupkg.sha512",

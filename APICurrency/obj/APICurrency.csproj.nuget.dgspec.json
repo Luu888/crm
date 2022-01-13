@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\t.kosek\\source\\repos\\Luu888\\crm\\APICurrency\\APICurrency.csproj": {}
+    "C:\\Users\\t.kosek\\Source\\Repos\\Luu888\\crm\\APICurrency\\APICurrency.csproj": {}
   },
   "projects": {
-    "C:\\Users\\t.kosek\\source\\repos\\Luu888\\crm\\APICurrency\\APICurrency.csproj": {
+    "C:\\Users\\t.kosek\\Source\\Repos\\Luu888\\crm\\APICurrency\\APICurrency.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\t.kosek\\source\\repos\\Luu888\\crm\\APICurrency\\APICurrency.csproj",
+        "projectUniqueName": "C:\\Users\\t.kosek\\Source\\Repos\\Luu888\\crm\\APICurrency\\APICurrency.csproj",
         "projectName": "APICurrency",
-        "projectPath": "C:\\Users\\t.kosek\\source\\repos\\Luu888\\crm\\APICurrency\\APICurrency.csproj",
+        "projectPath": "C:\\Users\\t.kosek\\Source\\Repos\\Luu888\\crm\\APICurrency\\APICurrency.csproj",
         "packagesPath": "C:\\Users\\t.kosek\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\t.kosek\\source\\repos\\Luu888\\crm\\APICurrency\\obj\\",
+        "outputPath": "C:\\Users\\t.kosek\\Source\\Repos\\Luu888\\crm\\APICurrency\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
