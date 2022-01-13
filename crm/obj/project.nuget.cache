@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "o2s4x8OCZqLZJqfeX/XHezzp+/P5SF3E3x8na67pajT82xwi7ZnUYZg9+f2dGnBOuTQBXTyNKNz/44D/rju/7A==",
+  "dgSpecHash": "Weq3I5BriOq33vQA5BaUcWEqfWy/1Y7znJSBoB47XOhPK479MqiO7k88lMCcX5mr2TT1fH/BproJnQx/hTzYAg==",
   "success": true,
   "projectFilePath": "C:\\Users\\t.kosek\\source\\repos\\Luu888\\crm\\crm\\crm.csproj",
   "expectedPackageFiles": [
@@ -54,6 +54,7 @@
     "C:\\Users\\t.kosek\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\t.kosek\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\t.kosek\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\t.kosek\\.nuget\\packages\\quartz\\3.3.3\\quartz.3.3.3.nupkg.sha512",
     "C:\\Users\\t.kosek\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\t.kosek\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\t.kosek\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",

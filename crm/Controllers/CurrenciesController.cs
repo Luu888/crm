@@ -6,16 +6,20 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using crm.Models;
+using crm.Services;
+using Quartz;
 
 namespace crm
 {
     public class CurrenciesController : Controller
     {
         private readonly CurrencyContext _context;
+        private readonly ICurrencyService _currencyService;
 
-        public CurrenciesController(CurrencyContext context)
+        public CurrenciesController(CurrencyContext context, ICurrencyService currencyService)
         {
             _context = context;
+            _currencyService = currencyService;
         }
 
         // GET: Currencies
@@ -193,6 +197,12 @@ namespace crm
             _context.Update(rowToUpdate);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
+        }
+
+        [HttpGet("/test")]
+        public IEnumerable<Currency> GetAll()
+        {
+            return _currencyService.GetAll();
         }
 
         private bool CurrencyExists(int id)

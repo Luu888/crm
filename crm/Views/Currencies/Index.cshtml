@@ -8,21 +8,21 @@
 
 <p>
     <a asp-action="Create"><button type="button" class="btn btn-success">Utwórz nową walutę</button></a>
-</p>
+</p><!--<a asp-action="CheckUpdate"><button type="button" class="btn btn-danger">Update Kursów</button></a>-->
 @using (Html.BeginForm())
 {
-<p>
-    <div class="form-row">
-        <div class="form-group col-md-6">
-             @Html.TextBox("SearchString", null, new { @class = "form-control", @placeholder= "Szukanie po nazwie lub symbolu" })
+    <p>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                @Html.TextBox("SearchString", null, new { @class = "form-control", @placeholder = "Szukanie po nazwie lub symbolu" })
+            </div>
+            <div class="form-group col-md-6">
+                <button type="submit" class="btn btn-primary">SZUKAJ</button>
+            </div>
         </div>
-        <div class="form-group col-md-6">
-            <button type="submit" class="btn btn-primary">SZUKAJ</button>
-        </div>
-    </div>
-   
-    
-</p>
+
+
+    </p>
 }
 <table class="table">
     <thead>
@@ -51,60 +51,61 @@
     <tbody>
         @foreach (var item in Model)
         {
-
+            var roundedCurr = Math.Round(item.Rate, 3);
             var synch = "TAK";
-            @if (item.Is_Sync == false) {
+            @if (item.Is_Sync == false)
+            {
                 synch = "NIE";
             }
 
-        <tr>
-            @if (item.Ghosted == false)
-            {
+            <tr>
+                @if (item.Ghosted == false)
+                {
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Symbol)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @roundedCurr
+                    </td>
+                    <td>
+                        @synch
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Created_at)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Updated_at)
+                    </td>
+                }
+                else
+                {
+                    <td class="table-active">
+                        @Html.DisplayFor(modelItem => item.Symbol)
+                    </td>
+                    <td class="table-active">
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td class="table-active">
+                        @Html.DisplayFor(modelItem => item.Rate)
+                    </td>
+                    <td class="table-active">
+                        @synch
+                    </td>
+                    <td class="table-active">
+                        @Html.DisplayFor(modelItem => item.Created_at)
+                    </td>
+                    <td class="table-active">
+                        @Html.DisplayFor(modelItem => item.Updated_at)
+                    </td>
+                }
                 <td>
-                    @Html.DisplayFor(modelItem => item.Symbol)
+                    <a asp-action="Edit" asp-route-id="@item.Id"><button type="button" class="btn btn-success">UPDATE</button></a>
+                    <a asp-action="Delete" asp-route-id="@item.Id"><button type="button" class="btn btn-danger">DELETE</button></a>
                 </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Rate)
-                </td>
-                <td>
-                    @synch
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Created_at)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Updated_at)
-                </td>
-            }
-            else
-            {
-                <td class="table-active">
-                    @Html.DisplayFor(modelItem => item.Symbol)
-                </td>
-                <td class="table-active">
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td class="table-active">
-                    @Html.DisplayFor(modelItem => item.Rate)
-                </td>
-                <td class="table-active">
-                    @synch
-                </td>
-                <td class="table-active">
-                    @Html.DisplayFor(modelItem => item.Created_at)
-                </td>
-                <td class="table-active">
-                    @Html.DisplayFor(modelItem => item.Updated_at)
-                </td>
-            }
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id"><button type="button" class="btn btn-success">UPDATE</button></a>
-                <a asp-action="Delete" asp-route-id="@item.Id"><button type="button" class="btn btn-danger">DELETE</button></a>
-            </td>
-        </tr>
+            </tr>
         }
     </tbody>
 </table>

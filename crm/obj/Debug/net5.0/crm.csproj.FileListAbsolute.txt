@@ -223,3 +223,4 @@ C:\Users\t.kosek\source\repos\Luu888\crm\crm\obj\Debug\net5.0\Razor\Views\Curren
 C:\Users\t.kosek\source\repos\Luu888\crm\crm\obj\Debug\net5.0\Razor\Views\Currencies\Details.cshtml.g.cs
 C:\Users\t.kosek\source\repos\Luu888\crm\crm\obj\Debug\net5.0\Razor\Views\Currencies\Edit.cshtml.g.cs
 C:\Users\t.kosek\source\repos\Luu888\crm\crm\obj\Debug\net5.0\Razor\Views\Currencies\Index.cshtml.g.cs
+C:\Users\t.kosek\source\repos\Luu888\crm\crm\bin\Debug\net5.0\Quartz.dll

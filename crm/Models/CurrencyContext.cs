@@ -14,9 +14,8 @@ namespace crm.Models
         }
         public CurrencyContext(DbContextOptions<CurrencyContext> options) : base(options)
         {
-            
-        }
 
+        }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Currency>().Property(c => c.Updated_at).HasDefaultValue(DateTime.Now);
